@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+
+local_backend:
+  url: http://localhost:8082/api/v1/
+  # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
+  allowed_hosts: [ '192.168.0.1' ]
+
+#backend:
+#  name: github
+#  repo: michaelkargl/portfolio
+#  branch: master
+#  auth_type: pkce
+
+site_url: https://localhost:9000/portfolio
+media_folder: ./static/assets
+public_folder: /portfolio/assets
+
+collections:
+  - name: curriculum
+    label: Curricula
+    label_singular: Curriculum
+    folder: src/cms/curriculum
+    create: true
+    fields:
+      - { name: type, label: Type, widget: hidden, default: 'curriculum' }
+      - { name: title, label: Title }
+      - { name: aboutMe, label: About Me, widget: markdown }
+      - { name: skillsDescription, label: Skill Description, widget: markdown }
+      - { name: skillsByScore, label: Scored Skills, widget: text }
+      - { name: skillsByTime, label: Timed Skills, widget: text }
+      - { name: training, label: Training, widget: markdown }
+      - { name: links, label: Links, widget: markdown }

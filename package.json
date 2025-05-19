@@ -1,0 +1,53 @@
+{
+  "name": "scan-me",
+  "version": "1.0.0",
+  "private": true,
+  "description": "scan-me",
+  "author": "Michael Kargl",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "ynpx": "npx ynpx --prefer-offline",
+    "develop": "yarn ynpx concurrently --kill-others \"yarn run storybook\" \"yarn run serve:cms\" \"yarn run gatsby develop\"",
+    "start": "yarn develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "serve:cms": "yarn run ynpx decap-server",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^3.1.0",
+    "decap-cms-app": "^3.6.2",
+    "gatsby": "^5.14.1",
+    "gatsby-plugin-decap-cms": "^4.0.4",
+    "gatsby-plugin-manifest": "^5.14.0",
+    "gatsby-plugin-mdx": "^5.14.1",
+    "gatsby-plugin-sass": "^6.14.0",
+    "gatsby-source-filesystem": "^5.14.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.89.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-onboarding": "^8.6.14",
+    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/react": "^8.6.14",
+    "@storybook/react-webpack5": "^8.6.14",
+    "@storybook/test": "^8.6.14",
+    "@types/node": "^20.11.19",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "concurrently": "^9.1.2",
+    "decap-server": "^3.2.0",
+    "storybook": "^8.6.14",
+    "typescript": "^5.3.3",
+    "ynpx": "^2.1.6"
+  }
+}
