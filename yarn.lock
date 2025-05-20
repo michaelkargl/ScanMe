@@ -11255,6 +11255,11 @@ pupa@^2.1.1:
   dependencies:
     escape-goat "^2.0.0"
 
+qr@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/qr/-/qr-0.4.2.tgz#6cc5da4bbe9d1dbc1cb3bf76e3e18abd95e59c98"
+  integrity sha512-wCv4rt7IcPNGT0J8JiTBHx7YrZzYuzpof38y/MFYd5Sp7OTyAFYL1e110In8PrAG/ffIOVl1ha3joJ2zpYxKMQ==
+
 qs@6.13.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.13.0.tgz#6ca3bd58439f7e245655798997787b0d88a51906"
