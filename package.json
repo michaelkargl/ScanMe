@@ -9,19 +9,18 @@
   ],
   "scripts": {
     "ynpx": "npx ynpx --prefer-offline",
-    "develop": "yarn ynpx concurrently --kill-others \"yarn run storybook\" \"yarn run serve:cms\" \"yarn run gatsby develop\"",
+    "develop": "yarn ynpx concurrently --kill-others \"yarn run serve:cms\" \"yarn run gatsby develop\"",
     "start": "yarn develop",
-    "build": "yarn run --offline gatsby build --prefix-paths && yarn run build:storybook",
-    "build:storybook": "storybook build",
+    "build": "yarn run --offline gatsby build --prefix-pathsk",
     "jest": "yarn run --offline ynpx jest --passWithNoTests",
     "test": "yarn run jest",
     "serve": "gatsby serve",
     "serve:cms": "yarn run ynpx decap-server",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit",
-    "storybook": "storybook dev -p 6006"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "98.css": "^0.1.21",
     "@mdx-js/react": "^3.1.0",
     "decap-cms-app": "^3.6.2",
     "gatsby": "^5.14.1",
@@ -35,20 +34,13 @@
     "sass": "^1.89.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.6.14",
-    "@storybook/addon-interactions": "^8.6.14",
-    "@storybook/addon-onboarding": "^8.6.14",
-    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
-    "@storybook/blocks": "^8.6.14",
-    "@storybook/react": "^8.6.14",
-    "@storybook/react-webpack5": "^8.6.14",
-    "@storybook/test": "^8.6.14",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "concurrently": "^9.1.2",
+    "css-loader": "^7.1.2",
     "decap-server": "^3.2.0",
-    "storybook": "^8.6.14",
+    "style-loader": "^4.0.0",
     "typescript": "^5.3.3",
     "ynpx": "^2.1.6"
   }

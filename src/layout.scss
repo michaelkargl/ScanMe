@@ -1,0 +1,26 @@
+html {
+  background-color: #c0c0c0;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.layout-component {
+  padding: 1em;
+  height: 100vh;
+
+  & .layout-component__sidebar {
+    height: 100%;
+  }
+
+  .layout-component__content {
+    flex-grow: 1;
+    margin: 0 1em;
+  }
+}
+

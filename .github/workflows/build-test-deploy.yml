@@ -37,11 +37,7 @@ jobs:
       - run: yarn install
       # ------------------------------------------------------------------------------
       - run: |
-          # increasing heap size since storybook build takes a touch more memory than 4144
-          export NODE_OPTIONS=--max-old-space-size=5048
-          node -e "console.log('Node heap_size_limit: %s', v8.getHeapStatistics().heap_size_limit/(1024*1024))"
           yarn run build
-          yarn run build:storybook
       # ------------------------------------------------------------------------------
       # TODO: https://stackoverflow.com/questions/61010294/how-to-cache-yarn-packages-in-github-actions#62244232
       - name: Setup Cache for Node Dependencies
@@ -121,7 +117,6 @@ jobs:
       - name: Build application artifacts
         run: |
           yarn run build
-          mv storybook-static public/storybook
       # ----------------------------------------------------------------------------
       - name: Uploading Public Folder
         uses: actions/upload-pages-artifact@v3
