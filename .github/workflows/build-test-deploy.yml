@@ -1,0 +1,134 @@
+name: build-test-deploy
+on:
+  push:
+    branches:
+    - gh-pages
+  workflow_dispatch:
+    inputs:
+      skip_cache:
+        description: 'Skip all caching steps'
+        required: false
+        default: 'false'
+        type: boolean
+      skip_test_job:
+        description: 'Skip the test job'
+        required: false
+        default: 'false'
+        type: boolean
+      skip_build_job:
+        description: 'Skip the build job'
+        required: false
+        default: 'false'
+        type: boolean
+jobs:
+  build:
+    if: ${{ github.event.inputs.skip_build_job != 'true' }}
+    runs-on: ubuntu-22.04
+    steps:
+      # ----------------------------------------------------------------------------
+      - uses: actions/checkout@v4
+      # ----------------------------------------------------------------------------
+      - uses: actions/setup-node@v3.9.1
+        with:
+          node-version-file: .nvmrc
+      # ------------------------------------------------------------------------------
+      - run: npm install --global yarn
+      # ------------------------------------------------------------------------------
+      - run: yarn install
+      # ------------------------------------------------------------------------------
+      - run: |
+          # increasing heap size since storybook build takes a touch more memory than 4144
+          export NODE_OPTIONS=--max-old-space-size=5048
+          node -e "console.log('Node heap_size_limit: %s', v8.getHeapStatistics().heap_size_limit/(1024*1024))"
+          yarn run build
+          yarn run build:storybook
+      # ------------------------------------------------------------------------------
+      # TODO: https://stackoverflow.com/questions/61010294/how-to-cache-yarn-packages-in-github-actions#62244232
+      - name: Setup Cache for Node Dependencies
+        if: ${{ github.event.inputs.skip_cache != 'true' }}
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache
+            node_modules
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+
+  test:
+    if: ${{ github.event.inputs.skip_test_job != 'true' }}
+    needs: build
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      # ----------------------------------------------------------------------------
+      - uses: actions/setup-node@v3.9.1
+        with:
+          node-version-file: .nvmrc
+      # ----------------------------------------------------------------------------
+      - uses: actions/cache@v4
+        if: ${{ github.event.inputs.skip_cache != 'true' }}
+        with:
+          path: |
+            .cache
+            node_modules
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+      # ----------------------------------------------------------------------------
+      - run: yarn install
+      - run: yarn run test
+      # ----------------------------------------------------------------------------
+  deploy:
+    needs: test
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: production
+      url: ${{ steps.myDeployment.outputs.page_url }}
+    steps:
+      - name: Checking out Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      # ----------------------------------------------------------------------------
+      - name: Setting up Node
+        uses: actions/setup-node@v3.9.1
+        with:
+          node-version-file: .nvmrc
+          cache: yarn
+      # ----------------------------------------------------------------------------
+      - name: Caching Node-Packages
+        if: ${{ github.event.inputs.skip_cache == 'false' }}
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache
+            node_modules
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('**/yarn.lock') }}
+      # ----------------------------------------------------------------------------
+      - name: Configuring Github-Pages
+        uses: actions/configure-pages@v4
+        with:
+          static_site_generator: gatsby
+          # ----------------------------------------------------------------------------
+      - name: Prepare deployment
+        run: |
+          yarn install
+      - name: Build application artifacts
+        run: |
+          yarn run build
+          mv storybook-static public/storybook
+      # ----------------------------------------------------------------------------
+      - name: Uploading Public Folder
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
+      # ----------------------------------------------------------------------------
+      - name: Deployment to Pages
+        id: myDeployment
+        uses: actions/deploy-pages@v4
+      # ----------------------------------------------------------------------------

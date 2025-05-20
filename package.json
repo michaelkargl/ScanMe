@@ -11,13 +11,15 @@
     "ynpx": "npx ynpx --prefer-offline",
     "develop": "yarn ynpx concurrently --kill-others \"yarn run storybook\" \"yarn run serve:cms\" \"yarn run gatsby develop\"",
     "start": "yarn develop",
-    "build": "gatsby build",
+    "build": "yarn run --offline gatsby build --prefix-paths && yarn run build:storybook",
+    "build:storybook": "storybook build",
+    "jest": "yarn run --offline ynpx jest --passWithNoTests",
+    "test": "yarn run jest",
     "serve": "gatsby serve",
     "serve:cms": "yarn run ynpx decap-server",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.0",
