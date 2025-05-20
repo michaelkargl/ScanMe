@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="" />
+    <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tab-menu/tab-menu-ui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tab-menu/tab-menu-ui.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/creator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/creator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/scanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/scanner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +80,7 @@
       <updated>1747695006164</updated>
       <workItem from="1747695018171" duration="2183000" />
       <workItem from="1747729224603" duration="248000" />
-      <workItem from="1747729488708" duration="11016000" />
+      <workItem from="1747729488708" duration="17982000" />
     </task>
     <servers />
   </component>

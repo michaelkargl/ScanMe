@@ -16,9 +16,7 @@ export const TabMenuUi: React.FC<TabMenuItemProps> = (props): ReactElement => {
             </menu>
             <div className='window' role='tabpanel'>
                 <div className='window-body'>
-                    <fieldset>
-                        {props.children}
-                    </fieldset>
+                    {props.children}
                 </div>
             </div>
         </fieldset>
