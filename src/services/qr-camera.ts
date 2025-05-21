@@ -105,7 +105,6 @@ export class QrCamera implements IQrCamera {
         const width = this.canvasElement.width = Math.trunc(parentSize.width * (1.0 - padding));
         const height = this.canvasElement.height = Math.trunc(width * aspectRatio);
 
-
         this.canvasElement.width = width;
         this.canvasElement.height = height;
 

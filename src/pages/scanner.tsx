@@ -60,8 +60,7 @@ const ScannerPage: React.FC = (): ReactElement => {
             <fieldset>
                 <div className='field-row-stacked'>
                     <label htmlFor='qr-content'>Content</label>
-                    <textarea id='qr-content' rows={10}>
-                        {qrContent}
+                    <textarea id='qr-content' rows={10} defaultValue={qrContent}>
                     </textarea>
                 </div>
             </fieldset>

@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="feat: display only canvas and resize it to fit screen">
+      <change afterPath="$PROJECT_DIR$/src/pages/creator.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/creator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/creator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/scanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/scanner.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/qr-camera.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/qr-camera.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +42,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;gh-pages&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/michael/workspace/git-space/ScanMe/src/pages&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -79,7 +85,8 @@
       <workItem from="1747729224603" duration="248000" />
       <workItem from="1747729488708" duration="17982000" />
       <workItem from="1747752347116" duration="12442000" />
-      <workItem from="1747804185538" duration="17950000" />
+      <workItem from="1747804185538" duration="18430000" />
+      <workItem from="1747835618700" duration="2535000" />
     </task>
     <task id="LOCAL-00001" summary="feat: adds frontal camera support">
       <option name="closed" value="true" />
@@ -113,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747822174732</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: display only canvas and resize it to fit screen">
+      <option name="closed" value="true" />
+      <created>1747822842044</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747822842044</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

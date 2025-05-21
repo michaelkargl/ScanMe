@@ -1,6 +1,7 @@
 import type {GatsbyConfig} from "gatsby";
 
 const config: GatsbyConfig = {
+    pathPrefix: `/ScanMe`,
     siteMetadata: {
         title: `ScanMe`,
         siteUrl: `https://www.yourdomain.tld`
