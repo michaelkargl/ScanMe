@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import {ReactElement} from "react";
 import {Layout} from "../layout";
 import encodeQR from 'qr';
-import decodeQR from "qr/decode.js";
 
 const CreatorPage: React.FC = (): ReactElement => {
     const [qrContent, setQrContent] = React.useState<string>("");
@@ -21,12 +20,11 @@ const CreatorPage: React.FC = (): ReactElement => {
                     <textarea id='qr-content' rows={8} onChange={(e) => setQrContent(e.target.value)}>
                         {qrContent}
                     </textarea>
-                    <pre>
+                    <p>
                         {qrCode}
-                    </pre>
+                    </p>
                 </div>
             </fieldset>
-            Creator Page
         </Layout>
     </div>)
 }

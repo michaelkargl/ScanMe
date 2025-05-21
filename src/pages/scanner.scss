@@ -1,0 +1,9 @@
+@use "../global";
+
+.video-container {
+  width: 100% !important;
+
+  & video {
+    width: 100px;
+  }
+}

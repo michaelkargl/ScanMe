@@ -14,10 +14,6 @@ body {
   padding: 1em;
   height: 100vh;
 
-  & .layout-component__sidebar {
-    height: 100%;
-  }
-
   .layout-component__content {
     flex-grow: 1;
     margin: 0 1em;

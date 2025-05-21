@@ -51,7 +51,7 @@ export class QrCamera implements IQrCamera {
 
     public stop(): void {
         this.log('Stopping camera...', LogLevel.INFO);
-        if(this.frontalCamera) {
+        if (this.frontalCamera) {
             this.frontalCamera.stop();
         }
         this.stopCameraSubject.next(true)
@@ -96,9 +96,18 @@ export class QrCamera implements IQrCamera {
             return null;
         }
 
-        // The screenshot size depends on the video size => we need to resize the canvas to fit its contents
-        const width = this.canvasElement.width = this.videoElement.videoWidth;
-        const height = this.canvasElement.height = this.videoElement.videoHeight;
+        // Resize canvas to the parent container while keeping the aspect-ratio
+        const padding = 0.1;
+        const parentSize = this.videoElement.parentElement?.getBoundingClientRect()!;
+        // Sometimes the height or width is not yet available causing NaN => we ensure a value
+        const aspectRatio = Math.max(1, this.videoElement.videoHeight) / Math.max(this.videoElement.videoWidth, 1);
+        // We truncate the fractions since there are no fractional pixels
+        const width = this.canvasElement.width = Math.trunc(parentSize.width * (1.0 - padding));
+        const height = this.canvasElement.height = Math.trunc(width * aspectRatio);
+
+
+        this.canvasElement.width = width;
+        this.canvasElement.height = height;
 
         const videoNotReady = width + height <= 0;
         if (videoNotReady) {

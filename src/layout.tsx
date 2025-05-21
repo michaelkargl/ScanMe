@@ -11,7 +11,7 @@ export const Layout: React.FC<PropsWithChildren<{}>> = (props) => {
                 <span className="title-bar-text">My Title</span>
             </div>
             <div className="window-body flex">
-                <div className="layout-component__sidebar">
+                <div className="layout-component__content">
                     <TabMenuUi infoLink='/' scannerLink='/scanner' creatorLink='/creator'>
                         {props.children}
                     </TabMenuUi>
