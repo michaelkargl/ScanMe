@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="Merge branch 'gh-pages'&#10;&#10;# Conflicts:&#10;#&#9;.github/workflows/build-test-deploy.yml&#10;#&#9;.idea/workspace.xml&#10;#&#9;package.json">
+    <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="feat: adds QrCamera with successful QrCode processing">
+      <change afterPath="$PROJECT_DIR$/src/services/log-entry.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/log-level.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/qr-camera.iface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/qr-camera.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/scanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/scanner.tsx" afterDir="false" />
     </list>
@@ -55,6 +59,7 @@
       <recent name="$PROJECT_DIR$/src/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/services" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components/button" />
       <recent name="$PROJECT_DIR$/static" />
@@ -78,8 +83,26 @@
       <workItem from="1747695018171" duration="2183000" />
       <workItem from="1747729224603" duration="248000" />
       <workItem from="1747729488708" duration="17982000" />
-      <workItem from="1747752347116" duration="5790000" />
+      <workItem from="1747752347116" duration="12442000" />
+      <workItem from="1747804185538" duration="11939000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: adds frontal camera support">
+      <option name="closed" value="true" />
+      <created>1747758480298</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747758480298</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: adds QrCamera with successful QrCode processing">
+      <option name="closed" value="true" />
+      <created>1747813155817</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747813155817</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +110,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: adds minimalistic scanner and creator" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: adds minimalistic scanner and creator" />
+    <MESSAGE value="feat: adds frontal camera support" />
+    <MESSAGE value="feat: adds QrCamera with successful QrCode processing" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: adds QrCamera with successful QrCode processing" />
   </component>
 </project>

@@ -7,7 +7,7 @@ import '98.css';
 const IndexPage: React.FC<PageProps> = () => {
   return (
       <Layout>
-        <Button>98 Button</Button>
+            Info
       </Layout>
   )
 }

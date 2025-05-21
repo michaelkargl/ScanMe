@@ -12,7 +12,7 @@ export const Layout: React.FC<PropsWithChildren<{}>> = (props) => {
             </div>
             <div className="window-body flex">
                 <div className="layout-component__sidebar">
-                    <TabMenuUi scannerLink='/scanner' creatorLink='/creator'>
+                    <TabMenuUi infoLink='/' scannerLink='/scanner' creatorLink='/creator'>
                         {props.children}
                     </TabMenuUi>
                 </div>
