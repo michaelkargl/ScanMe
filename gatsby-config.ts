@@ -11,8 +11,17 @@ const config: GatsbyConfig = {
     // Learn more at: https://gatsby.dev/graphql-typegen
     graphqlTypegen: true,
     plugins: [
-        "gatsby-plugin-decap-cms",
-        "gatsby-plugin-sass",
+        'gatsby-plugin-sass',
+        {
+            resolve: 'gatsby-plugin-decap-cms',
+            options: {
+                /**
+                 * One convention is to place your Decap CMS customization code in a
+                 * `src/cms` directory.
+                 */
+                modulePath: `${__dirname}/src/cms/cms.js`,
+            }
+        },
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
