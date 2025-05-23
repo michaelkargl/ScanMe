@@ -23,17 +23,9 @@ import CMS from "decap-cms-app"
  * Let's say you've created widget and preview components for a custom image
  * gallery widget in separate files:
  */
-// import ImageGalleryWidget from "./image-gallery-widget.js"
-// import ImageGalleryPreview from "./image-gallery-preview.js"
-import Preview from "decap-cms-widget-starter/dist/main";
-
-/**
- * Register the imported widget:
- */
 export const HelloWidgetControl = (props) => 'Hello Widget';
 export const HelloWidgetPreview = props => 'Hello Widget Preview';
 CMS.registerWidget('hello-widget', HelloWidgetControl, HelloWidgetPreview);
-CMS.registerWidget('mywidget', window.StarterControl, window.StarterPreview);
 
 console.log('CMS registered');
 console.log('CMS loaded');

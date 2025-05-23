@@ -12,6 +12,7 @@ const config: GatsbyConfig = {
     graphqlTypegen: true,
     plugins: [
         'gatsby-plugin-sass',
+        `gatsby-plugin-sharp`,
         {
             resolve: 'gatsby-plugin-decap-cms',
             options: {
@@ -23,6 +24,20 @@ const config: GatsbyConfig = {
             }
         },
         {
+            resolve: "gatsby-transformer-remark",
+            options: {
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-relative-images-v2`,
+                        options: {
+                            staticFolderName: 'static',
+                        }
+                    },
+                ],
+
+            },
+        },
+        {
             resolve: 'gatsby-plugin-manifest',
             options: {
                 "icon": "src/images/icon.png"
@@ -31,7 +46,7 @@ const config: GatsbyConfig = {
             resolve: 'gatsby-source-filesystem',
             options: {
                 "name": "pages",
-                "path": "./src/pages/"
+                "path": "./src/cms/"
             },
             __key: "pages"
         }
