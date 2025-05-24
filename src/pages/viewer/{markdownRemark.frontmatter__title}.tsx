@@ -1,21 +1,12 @@
 import {graphql} from "gatsby";
-import React from "react";
+import React, {useEffect} from "react";
+import {ViewerUi} from "../../components/viewer-ui/ViewerUi";
 
 const ViewerPage = ({data}: any) => {
     const markdown = data.allMarkdownRemark.edges[0].node.frontmatter;
+
     return (<div className='view-page-component'>
-        <h1>{markdown.title}</h1>
-        <ul>
-            <li>Content</li>
-            <ul>
-                <li>{markdown.mywidget}</li>
-            </ul>
-            <li>
-                <pre>
-                    {JSON.stringify(markdown, null, 2)}
-                </pre>
-            </li>
-        </ul>
+       <ViewerUi id={markdown.id} name={markdown.title} content={markdown.mywidget}/>
     </div>)
 }
 

@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="feat: renders qr codes as SVG instead of ASCII&#10;feat: adds path prefix for production builds">
-      <change afterPath="$PROJECT_DIR$/src/pages/view/{markdownRemark.frontmatter__title}.tsx" afterDir="false" />
+    <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="feat: generates routes automatically using the file system route api">
+      <change afterPath="$PROJECT_DIR$/src/components/creator-ui/creator-ui.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/models/markdown-file.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/viewer-ui/ViewerUi.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/viewer/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatsby-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cms/cms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cms/cms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tab-menu/tab-menu-ui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tab-menu/tab-menu-ui.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/creator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/creator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/scanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/scanner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/view/{markdownRemark.frontmatter__title}.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/viewer/{markdownRemark.frontmatter__title}.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +50,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;gh-pages&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.14.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.14.15&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/michael/workspace/git-space/ScanMe/src/pages&quot;,
@@ -99,7 +105,8 @@
       <workItem from="1747974785092" duration="509000" />
       <workItem from="1748010547333" duration="1355000" />
       <workItem from="1748018298867" duration="2322000" />
-      <workItem from="1748023319250" duration="5000000" />
+      <workItem from="1748023319250" duration="5051000" />
+      <workItem from="1748073143930" duration="10711000" />
     </task>
     <task id="LOCAL-00001" summary="feat: adds frontal camera support">
       <option name="closed" value="true" />
@@ -141,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747822842044</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: generates routes automatically using the file system route api">
+      <option name="closed" value="true" />
+      <created>1748028343947</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748028343947</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +167,7 @@
     <MESSAGE value="feat: adds frontal camera support" />
     <MESSAGE value="feat: adds QrCamera with successful QrCode processing" />
     <MESSAGE value="feat: display only canvas and resize it to fit screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: display only canvas and resize it to fit screen" />
+    <MESSAGE value="feat: generates routes automatically using the file system route api" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: generates routes automatically using the file system route api" />
   </component>
 </project>

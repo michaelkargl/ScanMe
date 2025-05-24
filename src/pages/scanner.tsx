@@ -4,7 +4,9 @@ import {filter} from "rxjs";
 import {LogLevel} from "../services/log-level";
 import {QrCamera} from "../services/qr-camera";
 import {LogEntry} from "../services/log-entry";
+import {TabMenuTabs} from "../components/tab-menu/tab-menu-ui";
 import './scanner.scss';
+import {navigate} from "gatsby";
 
 
 const ScannerPage: React.FC = (): ReactElement => {
@@ -23,7 +25,7 @@ const ScannerPage: React.FC = (): ReactElement => {
                 });
 
                 camera.getLogFeed().pipe(
-                    filter((entry: LogEntry) => entry.level >= LogLevel.DEBUG),
+                    filter((entry: LogEntry) => entry.level >= LogLevel.DEBUG)
                 ).subscribe((logEntry: LogEntry) => {
                     console.log(logEntry);
                     setLogEntry(logEntry.message);
@@ -36,8 +38,15 @@ const ScannerPage: React.FC = (): ReactElement => {
         }
     }, []);
 
+    useEffect(() => {
+        if (qrContent.length) {
+            navigate(`/viewer/${qrContent}`);
+        }
+
+    }, [qrContent]);
+
     return (<div className='scanner-page-component'>
-        <Layout>
+        <Layout selectedTab={TabMenuTabs.Scanner}>
 
             <fieldset>
                 <h2>Camera Feed</h2>
@@ -50,7 +59,7 @@ const ScannerPage: React.FC = (): ReactElement => {
             <fieldset>
                 <div className="video-container">
                     <video className='hidden' autoPlay playsInline ref={videoRef} id='video'/>
-                    <canvas ref={canvasRef} />
+                    <canvas ref={canvasRef}/>
                 </div>
                 <p>
                     {logEntry}
