@@ -1,10 +1,13 @@
 import React, {PropsWithChildren} from "react";
 import './layout.scss';
 import '98.css';
-import {Link} from "gatsby";
 import {TabMenuUi} from "./components/tab-menu/tab-menu-ui";
 
-export const Layout: React.FC<PropsWithChildren<{}>> = (props) => {
+export type LayoutProps = PropsWithChildren<{
+    selectedTab: number
+}>;
+
+export const Layout: React.FC<LayoutProps> = (props) => {
     return (<div className="layout-component">
         <div className='window'>
             <div className="title-bar">
@@ -12,7 +15,12 @@ export const Layout: React.FC<PropsWithChildren<{}>> = (props) => {
             </div>
             <div className="window-body flex">
                 <div className="layout-component__content">
-                    <TabMenuUi infoLink='/' scannerLink='/scanner' creatorLink='/creator'>
+                    <TabMenuUi
+                        selectedTab={props.selectedTab}
+                        infoLink='/'
+                        scannerLink='/scanner'
+                        creatorLink='/creator'
+                        viewerLink='/viewer'>
                         {props.children}
                     </TabMenuUi>
                 </div>

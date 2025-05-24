@@ -24,7 +24,6 @@
     "98.css": "^0.1.21",
     "@mdx-js/react": "^3.1.0",
     "decap-cms-app": "^3.6.2",
-    "decap-cms-widget-starter": "./libs/decap/decap-cms-widget-starter",
     "gatsby": "^5.14.1",
     "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-manifest": "^5.14.0",
@@ -35,6 +34,7 @@
     "qr": "^0.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-remark": "^2.1.0",
     "rxjs": "^7.8.2",
     "sass": "^1.89.0"
   },

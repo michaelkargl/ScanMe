@@ -1626,6 +1626,13 @@
   resolved "https://registry.yarnpkg.com/@lmdb/lmdb-win32-x64/-/lmdb-win32-x64-2.5.3.tgz#c72e8b6faae31d925d23a6db0379cc3fe0216fdd"
   integrity sha512-cK+Elf3RjEzrm3SerAhrFWL5oQAsZSJ/LmjL1joIpTfEP1etJJ9CTRvdaV6XLYAxaEkfdhk/9hOvHLbR9yIhCA==
 
+"@mapbox/hast-util-table-cell-style@^0.2.0":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/hast-util-table-cell-style/-/hast-util-table-cell-style-0.2.1.tgz#b8e92afdd38b668cf0762400de980073d2ade101"
+  integrity sha512-LyQz4XJIdCdY/+temIhD/Ed0x/p4GAOUycpFSEK2Ads1CPKZy6b7V/2ROEtQiLLQ8soIs0xe/QAoR6kwpyW/yw==
+  dependencies:
+    unist-util-visit "^1.4.1"
+
 "@mapbox/jsonlint-lines-primitives@~2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@mapbox/jsonlint-lines-primitives/-/jsonlint-lines-primitives-2.0.2.tgz#ce56e539f83552b58d10d672ea4d6fc9adc7b234"
@@ -11974,6 +11981,16 @@ react-refresh@^0.14.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.2.tgz#3833da01ce32da470f1f936b9d477da5c7028bf9"
   integrity sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==
 
+react-remark@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-remark/-/react-remark-2.1.0.tgz#dd68a32ab2d022e598b27dbfb754400e8f68555c"
+  integrity sha512-7dEPxRGQ23sOdvteuRGaQAs9cEOH/BOeCN4CqsJdk3laUDIDYRCWnM6a3z92PzXHUuxIRLXQNZx7SiO0ijUcbw==
+  dependencies:
+    rehype-react "^6.0.0"
+    remark-parse "^9.0.0"
+    remark-rehype "^8.0.0"
+    unified "^9.0.0"
+
 react-router-dom@^5.2.0:
   version "5.3.4"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.3.4.tgz#2ed62ffd88cae6db134445f4a0c0ae8b91d2e5e6"
@@ -12379,6 +12396,14 @@ rehype-parse@^6.0.0:
     hast-util-from-parse5 "^5.0.0"
     parse5 "^5.0.0"
     xtend "^4.0.0"
+
+rehype-react@^6.0.0:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/rehype-react/-/rehype-react-6.2.1.tgz#9b9bf188451ad6f63796b784fe1f51165c67b73a"
+  integrity sha512-f9KIrjktvLvmbGc7si25HepocOg4z0MuNOtweigKzBcDjiGSTGhyz6VSgaV5K421Cq1O+z4/oxRJ5G9owo0KVg==
+  dependencies:
+    "@mapbox/hast-util-table-cell-style" "^0.2.0"
+    hast-to-hyperscript "^9.0.0"
 
 rehype-remark@^8.0.0:
   version "8.1.1"
@@ -14509,7 +14534,7 @@ unist-util-visit-parents@^5.1.1:
     "@types/unist" "^2.0.0"
     unist-util-is "^5.0.0"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==

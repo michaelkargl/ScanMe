@@ -3,10 +3,11 @@ import type { HeadFC, PageProps } from "gatsby"
 import {Layout} from "../layout";
 import { Button } from "../components/button/Button";
 import '98.css';
+import {TabMenuTabs} from "../components/tab-menu/tab-menu-ui";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-      <Layout>
+      <Layout selectedTab={TabMenuTabs.Info}>
             Info
       </Layout>
   )

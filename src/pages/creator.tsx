@@ -1,37 +1,47 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useState} from "react";
 import {ReactElement} from "react";
-import {Layout} from "../layout";
-import encodeQR from 'qr';
 import './creator.scss';
+import {graphql, PageProps} from "gatsby";
+import {CreatorUi} from "../components/creator-ui/creator-ui";
+import {MarkdownFile} from "../components/shared/models/markdown-file";
 
 
-const CreatorPage: React.FC = (): ReactElement => {
-    const [qrContent, setQrContent] = React.useState<string>("");
-    const [qrCode, setQrCode] = React.useState<string>('');
-    const svgContainerRef = useRef<HTMLElement>(null);
+function mapToMarkdownFile(markdown: any) {
+    const fileName = markdown.node.fileAbsolutePath
+        .replace(/^.*[\\|/]/, '') // remove anything but the file name
+        .replace(/\..*$/, '');    // remove the extension
+    return {
+        id: markdown.node.id,
+        title: markdown.node.frontmatter.title,
+        fileName
+    }
+}
 
+const CreatorPage: React.FC<PageProps<Queries.ListAllCreatorMarkdownFilesQuery>> = ({data}): ReactElement => {
+    const [markdownFiles, setMarkdownFiles] = useState<MarkdownFile[]>([]);
     useEffect(() => {
-        const qrCode = encodeQR(qrContent, 'svg');
-        setQrCode(qrCode);
-
-    }, [qrContent]);
+        setMarkdownFiles(data.allMarkdownRemark.edges.map(mapToMarkdownFile));
+    }, []);
 
     return (<div className='creator-page-component'>
-        <Layout>
-            <fieldset>
-                <div className='field-row-stacked'>
-                    <label htmlFor='qr-content'>QR Content</label>
-                    <textarea id='qr-content' rows={8} onChange={(e) => setQrContent(e.target.value)}>
-                        {qrContent}
-                    </textarea>
-
-                    <div className='qr-code-container'>
-                        <img src={`data:image/svg+xml;utf8,${encodeURIComponent(qrCode!)}`}/>
-                    </div>
-                </div>
-            </fieldset>
-        </Layout>
+        <CreatorUi markdownFiles={markdownFiles}/>
     </div>)
 }
 
 export default CreatorPage;
+
+export const query = graphql`
+query ListAllCreatorMarkdownFiles {
+   allMarkdownRemark {
+    edges {
+      node {
+        id
+        fileAbsolutePath
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}   
+`
