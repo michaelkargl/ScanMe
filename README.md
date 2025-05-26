@@ -4,47 +4,38 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal TypeScript Starter
+  ScanMe
 </h1>
+<p align="center">
+    <code>git clone --recurse-submodules https://github.com/michaelkargl/ScanMe.git</code>
+</p>
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+Navigate into your new site’s directory and start it up.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+```shell
+yarn install
+yarn run start
+```
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+> Mind the console output for the URLs.
 
-2.  **Start developing.**
+Unless something has changed:
 
-    Navigate into your new site’s directory and start it up.
+|                  |                                    |
+|------------------|------------------------------------|
+| CMS Admin page   | <http://localhost:8000/admin/>     |
+| Application      | <http://localhost:8000/>           |
+| GraphQL Browser  | <http://localhost:8000/___graphql> |
+| Production Build | <http://localhost:9000/ScanMe/>    |
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Production Build
 
-3.  **Open the code and start customizing!**
+Build and test the production build by using
 
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/{markdownRemark.frontmatter__title}.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
-
+```shell 
+yarn run serve
+# and/or
+yarn run serve:only
+```
