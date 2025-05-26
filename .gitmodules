@@ -1,0 +1,3 @@
+[submodule "libs/decap/decap-contrib-encrypted-widget"]
+	path = libs/decap/decap-contrib-encrypted-widget
+	url = https://github.com/michaelkargl/decap-contrib-encrypted-widget.git

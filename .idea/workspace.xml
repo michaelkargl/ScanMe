@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="feat: generates routes automatically using the file system route api">
-      <change afterPath="$PROJECT_DIR$/src/components/creator-ui/creator-ui.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shared/models/markdown-file.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/viewer-ui/ViewerUi.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/viewer/index.tsx" afterDir="false" />
+    <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="Merge branch 'master' into gh-pages&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/pages/scanner.tsx">
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/decap/decap-contrib-encrypted-widget" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/decap/decap-cms-widget-starter/dist/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/decap/decap-cms-widget-starter/dist/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tab-menu/tab-menu-ui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tab-menu/tab-menu-ui.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/creator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/creator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/scanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/scanner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/view/{markdownRemark.frontmatter__title}.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/viewer/{markdownRemark.frontmatter__title}.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cms/cms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cms/cms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +101,7 @@
       <workItem from="1748018298867" duration="2322000" />
       <workItem from="1748023319250" duration="5051000" />
       <workItem from="1748073143930" duration="10711000" />
+      <workItem from="1748217316629" duration="2901000" />
     </task>
     <task id="LOCAL-00001" summary="feat: adds frontal camera support">
       <option name="closed" value="true" />

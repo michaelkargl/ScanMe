@@ -4,6 +4,7 @@
  * `registerPreviewTemplate`.
  */
 import CMS from "decap-cms-app"
+import "../../libs/decap/decap-contrib-encrypted-widget/dist/main";
 
 /**
  * Any imported styles should be automatically be applied to the editor preview
@@ -26,6 +27,7 @@ import CMS from "decap-cms-app"
 export const HelloWidgetControl = (props) => 'Hello Widget';
 export const HelloWidgetPreview = props => 'Hello Widget Preview';
 CMS.registerWidget('hello-widget', HelloWidgetControl, HelloWidgetPreview);
+CMS.registerWidget('mywidget', window.StarterControl, window.StarterPreview);
 
 console.log('CMS registered');
 console.log('CMS loaded');
