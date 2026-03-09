@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="feat: adds and registers  decap-contrib-encrypted-widget submodule">
+    <list default="true" id="8412f8e4-d08b-4f75-bfb9-de7da2002d98" name="Changes" comment="feat: updates ci to build pages from master">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +38,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "master",
-    "javascript.nodejs.core.library.configured.version": "20.14.0",
-    "javascript.nodejs.core.library.typings.version": "20.14.15",
-    "last_opened_file_path": "/home/michael/workspace/git-space/ScanMe/src/pages",
+    "javascript.nodejs.core.library.configured.version": "24.14.0",
+    "javascript.nodejs.core.library.typings.version": "24.12.0",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "C:/Users/kami/workspace/github-space/ScanMe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,7 +72,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.31033.133" />
       </set>
     </attachedChunks>
   </component>
@@ -95,6 +100,7 @@
       <workItem from="1748023319250" duration="5051000" />
       <workItem from="1748073143930" duration="10711000" />
       <workItem from="1748217316629" duration="3975000" />
+      <workItem from="1773030564915" duration="440000" />
     </task>
     <task id="LOCAL-00001" summary="feat: adds frontal camera support">
       <option name="closed" value="true" />
@@ -152,7 +158,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748221684137</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="docs: improves README">
+      <option name="closed" value="true" />
+      <created>1773030782801</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1773030782801</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: updates ci to build pages from master">
+      <option name="closed" value="true" />
+      <created>1773030865446</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1773030865446</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +187,8 @@
     <MESSAGE value="feat: display only canvas and resize it to fit screen" />
     <MESSAGE value="feat: generates routes automatically using the file system route api" />
     <MESSAGE value="feat: adds and registers  decap-contrib-encrypted-widget submodule" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: adds and registers  decap-contrib-encrypted-widget submodule" />
+    <MESSAGE value="docs: improves README" />
+    <MESSAGE value="feat: updates ci to build pages from master" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: updates ci to build pages from master" />
   </component>
 </project>
