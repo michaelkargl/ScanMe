@@ -3,7 +3,8 @@
     "allow": [
       "Bash(ls:*)",
       "Bash(git submodule:*)",
-      "Bash(yarn build:*)"
+      "Bash(yarn build:*)",
+      "Bash(git ls-tree:*)"
     ]
   },
   "enabledMcpjsonServers": [
