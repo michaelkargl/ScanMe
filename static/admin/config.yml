@@ -26,4 +26,5 @@ collections:
     fields:
       - { name: title, label: Title, widget: string }
       - { name: hellowidget, label: 'Hello Widget', widget: hello-widget, required: false }
-      - { name: mywidget, label: 'My Widget', widget: mywidget, required: false }
+      - { name: encrypted, label: 'Encrypted', widget: encrypted, required: false }
+      - { name: 'testwidget', label: 'Test Widget', widget: test, required: false }

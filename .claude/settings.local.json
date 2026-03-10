@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(git submodule:*)",
+      "Bash(yarn build:*)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "Filesystem",
+    "MongoDB",
+    "AzureDevOps",
+    "SequentialThinking",
+    "Memory"
+  ]
 }

@@ -27,7 +27,7 @@ import "../../libs/decap/decap-contrib-encrypted-widget/dist/main";
 export const HelloWidgetControl = (props) => 'Hello Widget';
 export const HelloWidgetPreview = props => 'Hello Widget Preview';
 CMS.registerWidget('hello-widget', HelloWidgetControl, HelloWidgetPreview);
-CMS.registerWidget('mywidget', window.StarterControl, window.StarterPreview);
+CMS.registerWidget('encrypted', window.StarterControl, window.StarterPreview);
 
 console.log('CMS registered');
 console.log('CMS loaded');
